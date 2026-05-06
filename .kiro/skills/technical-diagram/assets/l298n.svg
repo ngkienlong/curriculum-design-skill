@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" font-family="Arial, sans-serif">
+  <!-- Driver Motor L298N - realistic top-down view -->
+
+  <!-- PCB Board -->
+  <rect x="10" y="10" width="280" height="280" rx="6" fill="#cc2222" stroke="#991111" stroke-width="3"/>
+
+  <!-- 4 lỗ bắt vít ở 4 góc -->
+  <circle cx="30" cy="30" r="10" fill="white" stroke="#999" stroke-width="1.5"/>
+  <circle cx="270" cy="30" r="10" fill="white" stroke="#999" stroke-width="1.5"/>
+  <circle cx="30" cy="270" r="10" fill="white" stroke="#999" stroke-width="1.5"/>
+  <circle cx="270" cy="270" r="10" fill="white" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Heatsink (IC L298N) ở giữa trên -->
+  <rect x="90" y="55" width="120" height="50" rx="3" fill="#222" stroke="#111" stroke-width="2"/>
+  <!-- Tab kim loại heatsink -->
+  <rect x="95" y="65" width="110" height="12" rx="2" fill="#bbb" stroke="#999" stroke-width="1"/>
+  <!-- Chân IC phía dưới -->
+  <line x1="105" y1="105" x2="105" y2="125" stroke="#999" stroke-width="2"/>
+  <line x1="120" y1="105" x2="120" y2="125" stroke="#999" stroke-width="2"/>
+  <line x1="135" y1="105" x2="135" y2="125" stroke="#999" stroke-width="2"/>
+  <line x1="150" y1="105" x2="150" y2="125" stroke="#999" stroke-width="2"/>
+  <line x1="165" y1="105" x2="165" y2="125" stroke="#999" stroke-width="2"/>
+  <line x1="180" y1="105" x2="180" y2="125" stroke="#999" stroke-width="2"/>
+  <line x1="195" y1="105" x2="195" y2="125" stroke="#999" stroke-width="2"/>
+  <!-- Chân IC phía trên (ra ngoài board) -->
+  <line x1="105" y1="55" x2="105" y2="5" stroke="#222" stroke-width="3"/>
+  <line x1="125" y1="55" x2="125" y2="5" stroke="#222" stroke-width="3"/>
+  <line x1="145" y1="55" x2="145" y2="5" stroke="#222" stroke-width="3"/>
+  <line x1="165" y1="55" x2="165" y2="5" stroke="#222" stroke-width="3"/>
+  <line x1="185" y1="55" x2="185" y2="5" stroke="#222" stroke-width="3"/>
+
+  <!-- Tụ điện tròn bên trái -->
+  <circle cx="100" cy="175" r="25" fill="#333" stroke="#222" stroke-width="2"/>
+  <text x="100" y="170" text-anchor="middle" font-size="8" fill="#ccc">220</text>
+  <text x="100" y="180" text-anchor="middle" font-size="7" fill="#ccc">35V</text>
+
+  <!-- Tụ điện tròn bên phải -->
+  <circle cx="210" cy="200" r="25" fill="#333" stroke="#222" stroke-width="2"/>
+  <text x="210" y="195" text-anchor="middle" font-size="8" fill="#ccc">220</text>
+  <text x="210" y="205" text-anchor="middle" font-size="7" fill="#ccc">35V</text>
+
+  <!-- Voltage regulator (78M05) -->
+  <rect x="155" y="140" width="20" height="30" rx="2" fill="#222" stroke="#111" stroke-width="1.5"/>
+
+  <!-- OUT1, OUT2 - Terminal block bên trái -->
+  <rect x="12" y="100" width="25" height="22" rx="2" fill="#3498db" stroke="#2980b9" stroke-width="1.5"/>
+  <circle cx="24" cy="111" r="5" fill="white" stroke="#bbb" stroke-width="1"/>
+  <text x="24" y="95" text-anchor="middle" font-size="8" fill="white" font-weight="bold">OUT1</text>
+
+  <rect x="12" y="155" width="25" height="22" rx="2" fill="#3498db" stroke="#2980b9" stroke-width="1.5"/>
+  <circle cx="24" cy="166" r="5" fill="white" stroke="#bbb" stroke-width="1"/>
+  <text x="24" y="185" text-anchor="middle" font-size="8" fill="white" font-weight="bold">OUT2</text>
+
+  <!-- OUT3, OUT4 - Terminal block bên phải -->
+  <rect x="263" y="100" width="25" height="22" rx="2" fill="#3498db" stroke="#2980b9" stroke-width="1.5"/>
+  <circle cx="276" cy="111" r="5" fill="white" stroke="#bbb" stroke-width="1"/>
+  <text x="276" y="95" text-anchor="middle" font-size="8" fill="white" font-weight="bold">OUT4</text>
+
+  <rect x="263" y="155" width="25" height="22" rx="2" fill="#3498db" stroke="#2980b9" stroke-width="1.5"/>
+  <circle cx="276" cy="166" r="5" fill="white" stroke="#bbb" stroke-width="1"/>
+  <text x="276" y="185" text-anchor="middle" font-size="8" fill="white" font-weight="bold">OUT3</text>
+
+  <!-- Power terminal block (dưới trái): +12V, GND, +5V -->
+  <rect x="50" y="245" width="100" height="28" rx="3" fill="#3498db" stroke="#2980b9" stroke-width="1.5"/>
+  <circle cx="70" cy="259" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+  <circle cx="100" cy="259" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+  <circle cx="130" cy="259" r="7" fill="white" stroke="#bbb" stroke-width="1"/>
+  <text x="70" y="285" text-anchor="middle" font-size="8" fill="white" font-weight="bold">+12V</text>
+  <text x="100" y="285" text-anchor="middle" font-size="8" fill="white" font-weight="bold">GND</text>
+  <text x="130" y="285" text-anchor="middle" font-size="8" fill="white" font-weight="bold">+5V</text>
+
+  <!-- Input pins (dưới phải): ENA, IN1, IN2, IN3, IN4, ENB -->
+  <g transform="translate(160, 260)">
+    <!-- Pin header -->
+    <rect x="0" y="0" width="100" height="12" rx="2" fill="#222" stroke="#111" stroke-width="1"/>
+    <circle cx="8" cy="6" r="3.5" fill="#f1c40f"/>
+    <circle cx="24" cy="6" r="3.5" fill="#f1c40f"/>
+    <circle cx="40" cy="6" r="3.5" fill="#f1c40f"/>
+    <circle cx="56" cy="6" r="3.5" fill="#f1c40f"/>
+    <circle cx="72" cy="6" r="3.5" fill="#f1c40f"/>
+    <circle cx="88" cy="6" r="3.5" fill="#f1c40f"/>
+    <text x="8" y="26" text-anchor="middle" font-size="7" fill="white" font-weight="bold">ENA</text>
+    <text x="24" y="26" text-anchor="middle" font-size="7" fill="white" font-weight="bold">IN1</text>
+    <text x="40" y="26" text-anchor="middle" font-size="7" fill="white" font-weight="bold">IN2</text>
+    <text x="56" y="26" text-anchor="middle" font-size="7" fill="white" font-weight="bold">IN3</text>
+    <text x="72" y="26" text-anchor="middle" font-size="7" fill="white" font-weight="bold">IN4</text>
+    <text x="88" y="26" text-anchor="middle" font-size="7" fill="white" font-weight="bold">ENB</text>
+  </g>
+
+  <!-- Jumper +5V bên trái input pins -->
+  <rect x="155" y="240" width="8" height="14" rx="1" fill="#222" stroke="#111" stroke-width="1"/>
+  <text x="159" y="237" text-anchor="middle" font-size="6" fill="#f1c40f">+5V</text>
+
+  <!-- Jumper +5V bên phải -->
+  <rect x="255" y="240" width="8" height="14" rx="1" fill="#222" stroke="#111" stroke-width="1"/>
+  <text x="259" y="237" text-anchor="middle" font-size="6" fill="#f1c40f">+5V</text>
+
+  <!-- SMD components (decorative) -->
+  <rect x="50" y="50" width="12" height="6" rx="1" fill="#222"/>
+  <rect x="50" y="62" width="12" height="6" rx="1" fill="#222"/>
+  <rect x="240" y="50" width="12" height="6" rx="1" fill="#222"/>
+  <rect x="240" y="62" width="12" height="6" rx="1" fill="#222"/>
+  <rect x="240" y="74" width="12" height="6" rx="1" fill="#222"/>
+  <rect x="50" y="74" width="12" height="6" rx="1" fill="#222"/>
+
+  <!-- Nhãn chú thích dưới -->
+  <text x="150" y="310" text-anchor="middle" font-size="9" fill="#555">Motor A: IN1+IN2 → OUT1+OUT2 | Motor B: IN3+IN4 → OUT3+OUT4</text>
+  <text x="150" y="325" text-anchor="middle" font-size="9" fill="#555">ENA/ENB: điều chỉnh tốc độ (PWM) | +12V: nguồn motor | +5V: nguồn logic</text>
+</svg>

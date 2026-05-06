@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" font-family="Arial, sans-serif">
+  <!-- Điện trở 10kΩ - reusable -->
+  <rect x="10" y="5" width="80" height="30" rx="6" fill="#e8d5b7" stroke="#c4a882" stroke-width="2"/>
+  <!-- Vạch màu: nâu-đen-cam-vàng (10kΩ ±5%) -->
+  <rect x="22" y="9" width="6" height="22" rx="1" fill="#8B4513"/>
+  <rect x="34" y="9" width="6" height="22" rx="1" fill="#2c3e50"/>
+  <rect x="46" y="9" width="6" height="22" rx="1" fill="#e67e22"/>
+  <rect x="62" y="9" width="6" height="22" rx="1" fill="#f1c40f"/>
+  <text x="50" y="48" text-anchor="middle" font-size="10" fill="#555" font-weight="bold">10kΩ</text>
+</svg>

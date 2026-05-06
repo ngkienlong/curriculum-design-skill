@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 280" font-family="Arial, sans-serif">
+  <!-- Servo SG90 - realistic top-down view, connector on top -->
+
+  <!-- ===== Connector (đầu cắm đen, trên cùng) ===== -->
+  <rect x="42" y="5" width="36" height="22" rx="3" fill="#333" stroke="#222" stroke-width="2"/>
+  <!-- 3 lỗ cắm -->
+  <rect x="48" y="9" width="7" height="10" rx="1" fill="#111"/>
+  <rect x="57" y="9" width="7" height="10" rx="1" fill="#111"/>
+  <rect x="66" y="9" width="7" height="10" rx="1" fill="#111"/>
+
+  <!-- ===== 3 dây (nâu, đỏ, cam) ===== -->
+  <line x1="51" y1="27" x2="51" y2="72" stroke="#6E4B3A" stroke-width="4" stroke-linecap="round"/>
+  <line x1="60" y1="27" x2="60" y2="72" stroke="#E74C3C" stroke-width="4" stroke-linecap="round"/>
+  <line x1="69" y1="27" x2="69" y2="72" stroke="#F39C12" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- ===== Thân servo (hộp xanh dương, đứng dọc) ===== -->
+  <rect x="22" y="70" width="76" height="160" rx="6" fill="#3498DB" stroke="#2E86C1" stroke-width="2.5"/>
+
+  <!-- Vòng tròn trang trí trên thân (trên) -->
+  <circle cx="60" cy="95" r="14" fill="#5DADE2" opacity="0.5"/>
+  <!-- Vòng tròn trang trí trên thân (dưới, lớn) -->
+  <circle cx="60" cy="195" r="22" fill="#5DADE2" opacity="0.4"/>
+
+  <!-- Lỗ dây vào thân -->
+  <ellipse cx="60" cy="75" rx="12" ry="5" fill="#2E86C1"/>
+
+  <!-- ===== Cánh servo 4 hướng (cross horn) ===== -->
+  <g transform="translate(60, 140) rotate(-30)">
+    <!-- Cánh ngang -->
+    <rect x="-48" y="-6" width="96" height="12" rx="5" fill="#eee" stroke="#ccc" stroke-width="1.5"/>
+    <!-- Lỗ trên cánh ngang -->
+    <circle cx="-35" cy="0" r="2.5" fill="#ccc"/>
+    <circle cx="-25" cy="0" r="2" fill="#ccc"/>
+    <circle cx="-15" cy="0" r="2" fill="#ccc"/>
+    <circle cx="15" cy="0" r="2" fill="#ccc"/>
+    <circle cx="25" cy="0" r="2" fill="#ccc"/>
+    <circle cx="35" cy="0" r="2.5" fill="#ccc"/>
+    <!-- Cánh dọc -->
+    <rect x="-6" y="-48" width="12" height="96" rx="5" fill="#eee" stroke="#ccc" stroke-width="1.5"/>
+    <!-- Lỗ trên cánh dọc -->
+    <circle cx="0" cy="-35" r="2.5" fill="#ccc"/>
+    <circle cx="0" cy="-25" r="2" fill="#ccc"/>
+    <circle cx="0" cy="-15" r="2" fill="#ccc"/>
+    <circle cx="0" cy="15" r="2" fill="#ccc"/>
+    <circle cx="0" cy="25" r="2" fill="#ccc"/>
+    <circle cx="0" cy="35" r="2.5" fill="#ccc"/>
+    <!-- Hub giữa -->
+    <circle cx="0" cy="0" r="9" fill="#ddd" stroke="#bbb" stroke-width="1.5"/>
+    <!-- Vít giữa -->
+    <circle cx="0" cy="0" r="5" fill="#aaa" stroke="#888" stroke-width="1"/>
+    <!-- Dấu X trên vít -->
+    <line x1="-3" y1="-3" x2="3" y2="3" stroke="#666" stroke-width="1.5"/>
+    <line x1="3" y1="-3" x2="-3" y2="3" stroke="#666" stroke-width="1.5"/>
+  </g>
+
+  <!-- ===== Lỗ gắn dưới cùng ===== -->
+  <circle cx="60" cy="222" r="6" fill="white" stroke="#ccc" stroke-width="1.5"/>
+
+  <!-- Nhãn dây -->
+  <text x="35" y="55" font-size="7" fill="#6E4B3A" font-weight="bold">GND</text>
+  <text x="53" y="45" font-size="7" fill="#E74C3C" font-weight="bold">VCC</text>
+  <text x="72" y="55" font-size="7" fill="#F39C12" font-weight="bold">Sig</text>
+
+  <!-- Nhãn -->
+  <text x="60" y="260" text-anchor="middle" font-size="10" fill="#555" font-weight="bold">SG90</text>
+  <text x="60" y="273" text-anchor="middle" font-size="8" fill="#888">Micro Servo</text>
+</svg>
