@@ -7,7 +7,7 @@ description: >
   Kể cả khi người dùng nói "viết nội dung cho dự án X" hoặc "soạn tài liệu học" — hãy dùng skill này.
 metadata:
   author: kien-long
-  version: "2.0"
+  version: "2.1"
 ---
 
 ## Khả năng
@@ -101,7 +101,9 @@ Chỉ khi user duyệt khung sườn → AI tạo file textbook (theo quy tắc 
 
 ### Bước 3: Viết từng phần theo khung sườn (đợi user duyệt sau mỗi phần)
 
-Sau khi file đã có khung sườn, AI viết nội dung từng phần một, theo thứ tự từ trên xuống. Quy trình cho mỗi phần:
+Sau khi file đã có khung sườn, AI viết nội dung text từng phần một, theo thứ tự từ trên xuống. Ở bước này chỉ tập trung viết text, chưa tạo ảnh — các placeholder `[Hình dự kiến: ...]` giữ nguyên.
+
+Quy trình cho mỗi phần:
 
 3.1. Lấy phần tiếp theo chưa có nội dung (ví dụ: bắt đầu từ "1.1 Bối cảnh thực tế").
 
@@ -110,25 +112,38 @@ Sau khi file đã có khung sườn, AI viết nội dung từng phần một, t
 - Sinh động, gần gũi, có ví dụ thực tế.
 - Code mẫu (nếu có) phải chạy được, đúng cú pháp ngôn ngữ đang dạy.
 - Bảng/checklist khi cần.
+- Giữ nguyên placeholder `[Hình dự kiến: ...]` — chưa tạo ảnh ở bước này.
 
-3.3. Tạo ảnh nếu phần đó có placeholder `[Hình dự kiến: ...]`:
+3.3. Ghi nội dung vào đúng vị trí trong file textbook (giữ nguyên các phần khác chưa viết, giữ nguyên placeholder ảnh).
+
+3.4. Trình bày phần vừa viết cho user và đợi duyệt:
+- User duyệt → chuyển sang phần tiếp theo (quay lại 3.1).
+- User yêu cầu chỉnh → sửa lại phần đó rồi đợi duyệt lại.
+
+3.5. Lặp lại cho đến khi tất cả các phần trong khung sườn đều có nội dung text.
+
+### Bước 4: Tạo ảnh đồng loạt
+
+Sau khi toàn bộ nội dung text đã được viết và duyệt xong, AI quét lại file textbook để tìm tất cả placeholder `[Hình dự kiến: ...]` còn lại và tạo ảnh đồng loạt.
+
+Quy trình:
+
+4.1. Liệt kê tất cả placeholder ảnh còn trong file, trình bày cho user xác nhận danh sách ảnh cần tạo.
+
+4.2. Tạo ảnh lần lượt:
 - Với sơ đồ mạch điện, sơ đồ kết nối → dùng skill `technical-diagram`.
 - Với hình minh hoạ khái niệm, infographic → dùng skill `create-svg` hoặc `create-image`.
-- Lưu ảnh vào subfolder của dự án (ví dụ: `[tên-khoá]/[du-an-X-tên]/assets/`).
-- Thay placeholder trong file textbook bằng `![alt text](assets/tên-file.svg)`.
+- Lưu ảnh vào subfolder: `[tên-khoá]/[du-an-X-tên]/assets/`.
 
-3.4. Ghi nội dung và ảnh vào đúng vị trí trong file textbook (giữ nguyên các phần khác chưa viết).
+4.3. Thay từng placeholder trong file textbook bằng `![alt text](assets/tên-file.svg)` hoặc `.png`.
 
-3.5. Trình bày phần vừa viết cho user và đợi duyệt:
-- User duyệt → chuyển sang phần tiếp theo (quay lại 3.1).
-- User yêu cầu chỉnh → sửa lại phần đó, tạo lại ảnh nếu cần, rồi đợi duyệt lại.
+4.4. Trình bày kết quả cho user duyệt. User có thể yêu cầu tạo lại ảnh nào chưa đạt.
 
-3.6. Lặp lại cho đến khi tất cả các phần trong khung sườn đều có nội dung.
+### Bước 5: Tổng kết
 
-### Bước 4: Tổng kết
-
-Sau khi user duyệt phần cuối cùng:
+Sau khi user duyệt toàn bộ ảnh:
 - Đọc lại toàn bộ file textbook để kiểm tra tính nhất quán (giọng văn, đánh số, format).
+- Trình bày tóm tắt cho user: số phần đã viết, số ảnh đã tạo, đường dẫn file.
 - Hỏi user: muốn viết textbook cho dự án tiếp theo không, hay dừng ở đây.
 
 Nếu user muốn viết tiếp dự án khác → quay lại Bước 1 với dự án mới.
@@ -245,7 +260,9 @@ AI đề xuất khung sườn (header + hình dự kiến)  →  [User duyệt]
 AI tạo file textbook và ghi khung sườn rỗng vào file
         ↓
   Lặp cho từng phần trong khung sườn:
-  AI viết nội dung + tạo ảnh (nếu cần)  →  AI cập nhật file  →  [User duyệt]
+  AI viết nội dung text (giữ placeholder ảnh)  →  AI cập nhật file  →  [User duyệt]
+        ↓
+AI tạo ảnh đồng loạt cho tất cả placeholder  →  [User duyệt]
         ↓
 AI tổng kết, hỏi dự án tiếp theo
 ```
