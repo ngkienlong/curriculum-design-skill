@@ -130,9 +130,15 @@ Quy trình:
 
 4.1. Liệt kê tất cả placeholder ảnh còn trong file, trình bày cho user xác nhận danh sách ảnh cần tạo.
 
-4.2. Tạo ảnh lần lượt:
-- Với sơ đồ mạch điện, sơ đồ kết nối → dùng skill `technical-diagram`.
-- Với hình minh hoạ khái niệm, infographic → dùng skill `create-svg` hoặc `create-image`.
+4.2. Tạo ảnh lần lượt — chọn skill phù hợp với từng loại nội dung:
+
+- Sơ đồ mạch điện, sơ đồ kết nối kỹ thuật (wiring diagram, schematic) → dùng skill `technical-diagram`.
+- Đồ thị/biểu đồ dữ liệu cần độ chính xác cao (scatter plot, line chart, bar chart, histogram, regression line, heatmap, boxplot, pie chart) → dùng skill `data-visualize`. Bắt buộc dùng skill này khi có dữ liệu cụ thể, công thức toán, hoặc cần tỷ lệ trục chính xác.
+- Sơ đồ ý tưởng, infographic, flowchart, sơ đồ quy trình, sơ đồ tư duy, biểu đồ Venn → dùng skill `create-svg`. Phù hợp khi cần kiểm soát chính xác vị trí các phần tử (đếm, vị trí, mũi tên).
+- Hình minh hoạ bối cảnh, nhân vật, cảnh vật, hình mang tính nghệ thuật → dùng skill `create-image`.
+
+Ưu tiên data-visualize > create-svg cho mọi đồ thị có dữ liệu (vẽ tay SVG đồ thị dễ sai tỷ lệ trục và tọa độ).
+
 - Lưu ảnh vào subfolder: `[tên-khoá]/[du-an-X-tên]/assets/`.
 
 4.3. Thay từng placeholder trong file textbook bằng `![alt text](assets/tên-file.svg)` hoặc `.png`.
