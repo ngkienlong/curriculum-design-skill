@@ -2,10 +2,8 @@
 name: technical-diagram
 description: >
   Vẽ sơ đồ kỹ thuật điện tử chính xác (sơ đồ kết nối mạch, sơ đồ nguyên lý, pinout)
-  cho các dự án Arduino/điện tử. Dùng khi cần tạo sơ đồ mạch điện, sơ đồ kết nối linh kiện,
-  hoặc bất kỳ hình ảnh kỹ thuật nào yêu cầu chính xác về cực tính, chân nối, chiều dòng điện.
-  Kể cả khi người dùng nói "vẽ sơ đồ mạch", "sơ đồ kết nối", "wiring diagram" — hãy dùng skill này
-  thay vì create-svg chung chung.
+  cho các dự án Arduino/điện tử. Dùng khi cần tạo sơ đồ mạch điện, sơ đồ kết nối linh kiện, hoặc bất kỳ hình ảnh kỹ thuật nào yêu cầu chính xác về cực tính, chân nối, chiều dòng điện.
+  Kể cả khi người dùng nói "vẽ sơ đồ mạch", "sơ đồ kết nối", "wiring diagram" — hãy dùng skill này thay vì create-svg chung chung.
 metadata:
   author: kien-long
   version: "1.0"
