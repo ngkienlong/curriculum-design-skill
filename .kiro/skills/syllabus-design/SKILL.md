@@ -2,9 +2,7 @@
 name: syllabus-design
 description: >
   Thiết kế syllabus (khung chương trình) STEM/AI theo phương pháp Project-Based Learning.
-  Dùng khi người dùng muốn thiết kế syllabus, xây dựng chương trình học, lên khung khoá học,
-  hoặc brainstorm dự án cho khoá STEM/AI. Kể cả khi người dùng chỉ nói "tôi muốn dạy X"
-  hoặc "lên chương trình cho Y buổi" — hãy dùng skill này.
+  Dùng khi người dùng muốn thiết kế syllabus, xây dựng chương trình học, lên khung khoá học, hoặc brainstorm dự án cho khoá STEM/AI. Kể cả khi người dùng chỉ nói "tôi muốn dạy X" hoặc "lên chương trình cho Y buổi" — hãy dùng skill này.
 metadata:
   author: kien-long
   version: "2.1"
